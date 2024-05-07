@@ -36,7 +36,7 @@ def main():
     average_trip_lengths = data_processor.calculate_average_trip_length(combined_df)
     logging.info("Average trip length for each month:")
     for month, avg_trip_length in average_trip_lengths.items():
-        logging.info(f"{month}: {avg_trip_length:.2f} minutes")
+        logging.info(f"{month}: {avg_trip_length.values[0]:.2f} minutes")
 
     # Calculate 45-day rolling average trip length
     rolling_avg_trip_lengths = data_processor.calculate_rolling_average_trip_length(

@@ -65,23 +65,35 @@ class DataProcessor:
 
     def calculate_average_trip_length(self, combined_df):
         try:
+            if "year" not in combined_df.columns:
+                combined_df["year"] = combined_df["tpep_pickup_datetime"].dt.year
+            if "month" not in combined_df.columns:
+                combined_df["month"] = combined_df["tpep_pickup_datetime"].dt.month
+
             combined_df["tpep_pickup_datetime"] = pd.to_datetime(
                 combined_df["tpep_pickup_datetime"]
             )
             combined_df["tpep_dropoff_datetime"] = pd.to_datetime(
                 combined_df["tpep_dropoff_datetime"]
             )
+
             combined_df["trip_duration"] = (
                 combined_df["tpep_dropoff_datetime"]
                 - combined_df["tpep_pickup_datetime"]
             ).dt.total_seconds() / 60
+
             average_trip_lengths = (
-                combined_df.groupby(
-                    combined_df["tpep_pickup_datetime"].dt.to_period("M")
-                )["trip_duration"]
+                combined_df.groupby(["year", "month"])["trip_duration"]
                 .mean()
-                .to_dict()
+                .reset_index()
             )
+
+            # Convert to CSV file path
+            csv_file_path = os.path.join(self.output_folder, "average_trip_lengths.csv")
+
+            # Save to CSV file
+            average_trip_lengths.to_csv(csv_file_path, index=False)
+
             return average_trip_lengths
         except Exception as e:
             logging.error(f"Error occurred while calculating average trip length: {e}")
@@ -105,6 +117,10 @@ class DataProcessor:
             rolling_avg_trip_lengths = daily_avg_trip_lengths.rolling(
                 window=window_size, min_periods=1
             ).mean()
+            csv_file_path = os.path.join(
+                self.output_folder, "rolling_avg_trip_lengths.csv"
+            )
+            rolling_avg_trip_lengths.to_csv(csv_file_path, header=True)
             return rolling_avg_trip_lengths
         except Exception as e:
             logging.error(

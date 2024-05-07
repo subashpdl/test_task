@@ -95,3 +95,149 @@ Name: trip_duration, Length: 65, dtype: float64
 2024-02-29    15.821046
 2024-03-01    15.791866
 Name: trip_duration, Length: 65, dtype: float64
+2024-05-07 15:07:01,590 - INFO - Downloaded and stored: output_data\yellow_tripdata_2024-01.parquet
+2024-05-07 15:07:18,742 - INFO - Downloaded and stored: output_data\yellow_tripdata_2024-02.parquet
+2024-05-07 15:07:33,734 - INFO - Data appended to Parquet file.
+2024-05-07 15:07:35,050 - INFO - Average trip length for each month:
+2024-05-07 15:07:35,050 - INFO - 2002-12: 6.03 minutes
+2024-05-07 15:07:35,050 - INFO - 2008-12: 11.33 minutes
+2024-05-07 15:07:35,050 - INFO - 2009-01: 32.27 minutes
+2024-05-07 15:07:35,050 - INFO - 2023-12: 10.16 minutes
+2024-05-07 15:07:35,050 - INFO - 2024-01: 15.61 minutes
+2024-05-07 15:07:35,050 - INFO - 2024-02: 15.98 minutes
+2024-05-07 15:07:35,050 - INFO - 2024-03: 15.24 minutes
+2024-05-07 15:07:36,867 - INFO - 45-day rolling average trip length:
+2024-05-07 15:07:36,867 - INFO - tpep_pickup_datetime
+2002-12-31     6.033333
+2008-12-31     8.683333
+2009-01-01    16.547222
+2023-12-31    14.950000
+2024-01-01    15.233666
+                ...    
+2024-02-26    15.690275
+2024-02-27    15.713100
+2024-02-28    15.774823
+2024-02-29    15.821046
+2024-03-01    15.791866
+Name: trip_duration, Length: 65, dtype: float64
+2024-05-07 15:12:16,909 - INFO - File already exists: output_data\yellow_tripdata_2024-01.parquet
+2024-05-07 15:12:16,910 - INFO - File already exists: output_data\yellow_tripdata_2024-02.parquet
+2024-05-07 15:14:25,261 - INFO - File already exists: output_data\yellow_tripdata_2024-01.parquet
+2024-05-07 15:14:25,261 - INFO - File already exists: output_data\yellow_tripdata_2024-02.parquet
+2024-05-07 15:14:35,119 - ERROR - Error occurred while reading Parquet file output_data\yellow_tripdata_2024-01.parquet: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2024-05-07 15:14:35,119 - ERROR - Error occurred while reading Parquet file output_data\yellow_tripdata_2024-02.parquet: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2024-05-07 15:17:37,446 - INFO - File already exists: output_data\yellow_tripdata_2024-01.parquet
+2024-05-07 15:17:37,446 - INFO - File already exists: output_data\yellow_tripdata_2024-02.parquet
+2024-05-07 15:17:51,207 - INFO - Data appended to Parquet file.
+2024-05-07 15:17:52,364 - INFO - Average trip length for each month:
+2024-05-07 15:17:52,364 - INFO - 2002-12: 6.03 minutes
+2024-05-07 15:17:52,364 - INFO - 2008-12: 11.33 minutes
+2024-05-07 15:17:52,364 - INFO - 2009-01: 32.27 minutes
+2024-05-07 15:17:52,364 - INFO - 2023-12: 10.16 minutes
+2024-05-07 15:17:52,364 - INFO - 2024-01: 15.61 minutes
+2024-05-07 15:17:52,364 - INFO - 2024-02: 15.98 minutes
+2024-05-07 15:17:52,364 - INFO - 2024-03: 15.24 minutes
+2024-05-07 15:17:53,820 - INFO - 45-day rolling average trip length:
+2024-05-07 15:17:53,820 - INFO - tpep_pickup_datetime
+2002-12-31     6.033333
+2008-12-31     8.683333
+2009-01-01    16.547222
+2023-12-31    14.950000
+2024-01-01    15.233666
+                ...    
+2024-02-26    15.690275
+2024-02-27    15.713100
+2024-02-28    15.774823
+2024-02-29    15.821046
+2024-03-01    15.791866
+Name: trip_duration, Length: 65, dtype: float64
+2024-05-07 15:53:11,247 - INFO - File already exists: output_data\yellow_tripdata_2024-01.parquet
+2024-05-07 15:53:11,247 - INFO - File already exists: output_data\yellow_tripdata_2024-02.parquet
+2024-05-07 15:53:24,956 - INFO - Data appended to Parquet file.
+2024-05-07 15:53:26,470 - ERROR - Error occurred while calculating average trip length: cannot insert tpep_pickup_datetime, already exists
+2024-05-07 15:53:26,470 - INFO - Average trip length for each month:
+2024-05-07 16:00:03,889 - INFO - File already exists: output_data\yellow_tripdata_2024-01.parquet
+2024-05-07 16:00:03,889 - INFO - File already exists: output_data\yellow_tripdata_2024-02.parquet
+2024-05-07 16:00:20,341 - INFO - Data appended to Parquet file.
+2024-05-07 16:00:21,826 - ERROR - Error occurred while calculating average trip length: cannot insert tpep_pickup_datetime, already exists
+2024-05-07 16:00:21,826 - INFO - Average trip length for each month:
+2024-05-07 16:00:23,367 - INFO - 45-day rolling average trip length:
+2024-05-07 16:00:23,367 - INFO - tpep_pickup_datetime
+2002-12-31     6.033333
+2008-12-31     8.683333
+2009-01-01    16.547222
+2023-12-31    14.950000
+2024-01-01    15.233666
+                ...    
+2024-02-26    15.690275
+2024-02-27    15.713100
+2024-02-28    15.774823
+2024-02-29    15.821046
+2024-03-01    15.791866
+Name: trip_duration, Length: 65, dtype: float64
+2024-05-07 16:12:12,805 - INFO - Downloaded and stored: output_data\yellow_tripdata_2024-01.parquet
+2024-05-07 16:12:33,531 - INFO - Downloaded and stored: output_data\yellow_tripdata_2024-02.parquet
+2024-05-07 16:12:49,184 - INFO - Data appended to Parquet file.
+2024-05-07 16:12:50,699 - INFO - Average trip length for each month:
+2024-05-07 16:21:32,735 - INFO - File already exists: output_data\yellow_tripdata_2024-01.parquet
+2024-05-07 16:21:32,735 - INFO - File already exists: output_data\yellow_tripdata_2024-02.parquet
+2024-05-07 16:21:48,368 - INFO - Data appended to Parquet file.
+2024-05-07 16:21:49,834 - INFO - Average trip length for each month:
+2024-05-07 16:31:04,204 - INFO - File already exists: output_data\yellow_tripdata_2024-01.parquet
+2024-05-07 16:31:04,204 - INFO - File already exists: output_data\yellow_tripdata_2024-02.parquet
+2024-05-07 16:31:19,414 - INFO - Data appended to Parquet file.
+2024-05-07 16:31:20,855 - INFO - Average trip length for each month:
+2024-05-07 16:34:50,503 - INFO - File already exists: output_data\yellow_tripdata_2024-01.parquet
+2024-05-07 16:34:50,503 - INFO - File already exists: output_data\yellow_tripdata_2024-02.parquet
+2024-05-07 16:35:06,304 - INFO - Data appended to Parquet file.
+2024-05-07 16:35:07,707 - INFO - Average trip length for each month:
+2024-05-07 16:36:49,525 - INFO - File already exists: output_data\yellow_tripdata_2024-01.parquet
+2024-05-07 16:36:49,526 - INFO - File already exists: output_data\yellow_tripdata_2024-02.parquet
+2024-05-07 16:37:03,584 - INFO - Data appended to Parquet file.
+2024-05-07 16:37:04,861 - INFO - Average trip length for each month:
+2024-05-07 16:37:04,861 - INFO - year: 2002.00 minutes
+2024-05-07 16:37:04,861 - INFO - month: 12.00 minutes
+2024-05-07 16:37:04,861 - INFO - trip_duration: 6.03 minutes
+2024-05-07 16:37:06,359 - INFO - 45-day rolling average trip length:
+2024-05-07 16:37:06,360 - INFO - tpep_pickup_datetime
+2002-12-31     6.033333
+2008-12-31     8.683333
+2009-01-01    16.547222
+2023-12-31    14.950000
+2024-01-01    15.233666
+                ...    
+2024-02-26    15.690275
+2024-02-27    15.713100
+2024-02-28    15.774823
+2024-02-29    15.821046
+2024-03-01    15.791866
+Name: trip_duration, Length: 65, dtype: float64
+2024-05-07 16:54:27,205 - INFO - File already exists: output_data\yellow_tripdata_2024-01.parquet
+2024-05-07 16:54:27,205 - INFO - File already exists: output_data\yellow_tripdata_2024-02.parquet
+2024-05-07 16:54:42,979 - INFO - Data appended to Parquet file.
+2024-05-07 16:54:44,431 - INFO - Average trip length for each month:
+2024-05-07 16:54:44,431 - INFO - year: 2002.00 minutes
+2024-05-07 16:54:44,431 - INFO - month: 12.00 minutes
+2024-05-07 16:54:44,432 - INFO - trip_duration: 6.03 minutes
+2024-05-07 16:54:45,981 - INFO - 45-day rolling average trip length:
+2024-05-07 16:54:45,981 - INFO - tpep_pickup_datetime
+2002-12-31     6.033333
+2008-12-31     8.683333
+2009-01-01    16.547222
+2023-12-31    14.950000
+2024-01-01    15.233666
+                ...    
+2024-02-26    15.690275
+2024-02-27    15.713100
+2024-02-28    15.774823
+2024-02-29    15.821046
+2024-03-01    15.791866
+Name: trip_duration, Length: 65, dtype: float64
