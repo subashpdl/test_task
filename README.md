@@ -6,6 +6,7 @@ To streamline the process, I've built a Docker image and set up a CI/CD pipeline
 1. Clone the Repository: git clone https://github.com/subashpdl/test_task.git
 2. Install Requirements: pip install -r requirements.txt
 3. Run the Code: python main.py
+
 There are differnt approaches to tackling this task. For production-level solutions, deploying a Docker container would be great option. Additionally, leveraging Apache Airflow for task orchestration, such as scheduling scripts to run monthly, can enhance efficiency and maintainability.
 
 In my opinion, The best practice is creating fixed schema for all files, followed by the ingestion of data into this schema, especially on platforms like HDFS or various cloud services, to ensure efficient management of large datasets and then calcuating or analyzing the data.
