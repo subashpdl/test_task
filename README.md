@@ -10,6 +10,8 @@ There are differnt approaches to tackling this task. For production-level soluti
 
 In my opinion, The best practice is creating fixed schema for all files, followed by the ingestion of data into this schema, especially on platforms like HDFS or various cloud services, to ensure efficient management of large datasets and then calcuating or analyzing the data.
 
-#Scalling Datapipeline:
+# Scalling Data Pipeline: 
+For this task, considering the extensive timeframe of yellow taxi trip record data spanning from 2009 until February 2024, integrating all the data might be time-consuming. Hence, the most viable approach would be distributed data processing, facilitated by systems like the Python library Dask. Dask enables parallel and distributed computing, ensuring scalability for data processing and machine learning tasks. Alternatively, Spark serves as another robust option for scalable data processing, offering distributed processing capabilities and fault tolerance, making it suitable for handling large-scale datasets across clusters of machines. However, it's imperative to initially determine the approximate size of the data. If the data is relational, storing it in SQL databases would be advantageous, as it allows processing through SQL queries or other systems like Spark or Python, leveraging the powerful ACID (Atomicity, Consistency, Isolation, Durability) features of SQL databases.
+
 
 
